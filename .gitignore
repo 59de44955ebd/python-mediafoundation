@@ -1,0 +1,8 @@
+/releases/
+/stuff/
+/test_files/
+_backup.rar
+/dll/*.user
+/dll/.vs/
+/dll/x64/
+/dll/Win32/
