@@ -58,10 +58,10 @@ STDAPI GetFrameRate(float *pfRate)
 	return E_UNEXPECTED;
 }
 
-STDAPI GetMetadata(BYTE **pData, DWORD *pDataSize)
+STDAPI GetMediaInfos(BYTE **pData, DWORD *pDataSize)
 {
 	if (g_pPlayer)
-		return g_pPlayer->GetMetadata(pData, pDataSize);
+		return g_pPlayer->GetMediaInfos(pData, pDataSize);
 	return E_UNEXPECTED;
 }
 

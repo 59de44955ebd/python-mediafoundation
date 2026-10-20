@@ -50,7 +50,7 @@ step_back(frames: int)
 step_forward(frames: int)
 
 get_duration() -> float seconds
-get_metadata() -> dict
+get_media_infos() -> dict
 get_size() -> tuple(int, int)
 get_time() -> float seconds
 get_volume() -> float  # 0..1
@@ -98,7 +98,7 @@ All demos implement basically the same application, a simple video player with t
 - Media files can be dropped from Explorer into the window
 - Mouse click on video toggles play/pause state.
 - Double-click on video toggles fullscreen mode.
-- Menu File->Properties or Ctrl+I shows infos/metadata about the current media file
+- Menu File->Properties or Ctrl+I shows media infos for the current media file.
 
 *PyQt5 demo*  
 ![](screenshots/demo_pyqt5.png)

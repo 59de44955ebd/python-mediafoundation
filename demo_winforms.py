@@ -245,7 +245,7 @@ class Main(WinForms.Form):
         """
         if not self.mediaplayer.has_media():
             return
-        data = self.mediaplayer.get_metadata()
+        data = self.mediaplayer.get_media_infos()
         text = ''
         for k, v in sorted(data.items()):
             text += f'{k} : {v}\n'

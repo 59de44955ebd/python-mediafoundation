@@ -300,7 +300,7 @@ VARENUM handle_key(PROPERTYKEY key, wchar_t *key_name)
 //######################################
 //
 //######################################
-HRESULT CPlayer::GetMetadata(BYTE **pData, DWORD *pDataSize)
+HRESULT CPlayer::GetMediaInfos(BYTE **pData, DWORD *pDataSize)
 {
 	if (m_pSource == NULL)
 		return E_UNEXPECTED;
@@ -505,7 +505,7 @@ HRESULT CPlayer::GetStream(DWORD idx, LPDWORD pType, LPDWORD pFourCC, LPBOOL pSe
 
 				IMFMediaType *pMediaType;
 				DWORD cnt;
-				if (SUCCEEDED(pMediaTypeHandler->GetMediaTypeCount(&cnt)) && cnt);
+				if (SUCCEEDED(pMediaTypeHandler->GetMediaTypeCount(&cnt)) && cnt)
 				{
 					if (SUCCEEDED(pMediaTypeHandler->GetMediaTypeByIndex(0, &pMediaType)))
 					{

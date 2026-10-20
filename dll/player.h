@@ -70,7 +70,7 @@ public:
 	HRESULT		GetCurrentImage(BITMAPINFOHEADER *pBih, BYTE **pDib, DWORD *pcbDib, LONGLONG *pTimeStamp);
 	HRESULT		GetDuration(MFTIME *pDuration);
 	HRESULT		GetFrameRate(float *pfRate);
-	HRESULT		GetMetadata(BYTE **pData, DWORD *pDataSize);
+	HRESULT		GetMediaInfos(BYTE **pData, DWORD *pDataSize);
 	HRESULT		GetMute(LPBOOL pbMute);
 	HRESULT		GetRate(float *pfRate);
 	HRESULT		GetSize(LPDWORD pSize);

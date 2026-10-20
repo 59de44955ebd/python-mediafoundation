@@ -26,8 +26,8 @@ _mf.GetCurrentImage.argtypes = (POINTER(BITMAPINFOHEADER), POINTER(LPBYTE), LPDW
 _mf.GetDuration.argtypes = (POINTER(MFTIME),)
 #STDAPI GetFrameRate(float *pfRate)
 _mf.GetFrameRate.argtypes = (LPFLOAT,)
-#STDAPI GetMetadata(BYTE **pData, DWORD *pDataSize)
-_mf.GetMetadata.argtypes = (POINTER(LPBYTE), LPDWORD)
+#STDAPI GetMediaInfos(BYTE **pData, DWORD *pDataSize)
+_mf.GetMediaInfos.argtypes = (POINTER(LPBYTE), LPDWORD)
 #STDAPI GetMute(BOOL *pbMute)
 #STDAPI GetRate(float *pfRate)
 _mf.GetRate.argtypes = (LPFLOAT,)
@@ -697,10 +697,10 @@ class Player():
     ########################################
     #
     ########################################
-    def get_metadata(self) -> dict:
+    def get_media_infos(self) -> dict:
         data_ptr = POINTER(BYTE)()
         data_size = DWORD()
-        if _mf.GetMetadata(byref(data_ptr), byref(data_size)) != 0:
+        if _mf.GetMediaInfos(byref(data_ptr), byref(data_size)) != 0:
             raise PlayerException()
         meta_data = cast(data_ptr, POINTER(WCHAR * data_size.value)).contents.value.strip()
         ole32.CoTaskMemFree(data_ptr)

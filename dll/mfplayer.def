@@ -8,7 +8,7 @@ EXPORTS
 	GetCurrentImage		PRIVATE
 	GetDuration			PRIVATE
 	GetFrameRate		PRIVATE
-	GetMetadata			PRIVATE
+	GetMediaInfos		PRIVATE
 	GetMute				PRIVATE
 	GetRate				PRIVATE
 	GetSize				PRIVATE
