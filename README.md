@@ -1,6 +1,8 @@
 # python-mediafoundation (mfplayer)
 
-`python-mediafoundation` is a simple Python package for Windows x64 that allows to quickly add Multimedia support to interactive GUI applications. Its core is a `Player` object that is initialized with the window handle (`HWND`) of some existing window/control and then renders video (if there is video, not just audio) into this window. The video is automatically resized whenever the size of this window changes.
+`python-mediafoundation` is a simple Python package for Windows x64 that allows to quickly add Multimedia support to interactive GUI applications via [Microsoft Media Foundation](https://learn.microsoft.com/en-us/windows/win32/medfound/microsoft-media-foundation-sdk). Its core is a `Player` object that is initialized with the window handle (`HWND`) of some existing window/control and then renders video (if there is video, not just audio) into this window. The video is automatically resized whenever the size of this window changes.
+
+`Media Foundation` support is based on a small wrapper [.dll](dll/) that is loaded via ctypes/libffi.
 
 Demos are provided for the following GUI toolkits:
 - [PyQt5](demo_pyqt5.py) (easily portable to PyQt6 or PySide6)
